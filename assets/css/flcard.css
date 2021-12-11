@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+#project{
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    margin-top: 80px;
+}
+
+.box4{
+    z-index: -1;
+    position: absolute;
+}
+  
+.b4{
+    width: 1000px;
+    height: 600px;
+}
+
+#project >.flipcard> .project-content >h4{
+    margin-right: 750px;
+    margin-top: 90px;
+}
+
+.word{
+    z-index: 10;
+    color: rgb(231, 195, 141);
+    -webkit-text-stroke: 1px black;
+    text-shadow: 5px 5px black,-1px -1px 0 black,1px -1px 0 black, -1px 1px 0 black,1px 1px 0 black;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 3.8rem;
+}
+/*project*/
+
+/* flipcard */
+.flipcard{
+    margin-top: -2rem;
+    padding: 2rem 0;
+    font-family: "Noto Sans TC", sans-serif;
+}
+.cardwrapper{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.flipping-card-item-wrapper{
+    perspective: 150rem;
+    position: relative;
+    width:   250px;
+    height:  300px;
+    margin: 1rem;
+}
+
+.flipping-card-item-side{
+    position: absolute;
+    top: -20px;
+    backface-visibility: hidden;
+    margin:  1.5rem;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-color: #a29c9c;
+    box-shadow: 5px 5px black,-1px -1px 0 black,1px -1px 0 black, -1px 1px 0 black,1px 1px 0 black;
+    transition: all 1s;
+}
+
+
+.flipping-card-item-side-back{
+    color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+}
+
+
+.flipping-card-item-wrapper:hover .flipping-card-item-side-front{
+    transform: rotateY(-180deg);
+}
+
+.flipping-card-item-wrapper:hover .flipping-card-item-side-back{
+    transform: rotateY(0);
+}
+
+.flipping-card-item-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-blend-mode: color;
+}
+
+.flipping-card-back-wrapper{
+    font-weight: 200;
+	font-size: 18px;
+    position: relative;
+    top: 3%;
+    left: 0;
+    margin: 2rem;
+    text-align: center;
+}
+
+.flipping-card-back-wrapper__btn {
+    padding: .7rem;
+    text-align: center;
+    color: #ffffff;
+    border: 0;
+    background-image: linear-gradient(to right bottom, #e9c8c3, #df9d93);
+    transition: all .5s;
+    box-shadow: 5px 5px black,-1px -1px 0 black,1px -1px 0 black, -1px 1px 0 black,1px 1px 0 black;
+}
+
+.flipping-card-back-wrapper__btn:hover {
+    background-image: none;
+    color: #ffa41b;
+    border: 1px solid #ffa41b;
+}
